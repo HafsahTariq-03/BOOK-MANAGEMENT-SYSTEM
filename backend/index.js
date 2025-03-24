@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: 'http://34.226.249.134', 
+    origin: 'http://44.201.103.207', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true, 
   })
@@ -32,7 +32,7 @@ mongoose
     console.log(' Connected to MongoDB');
 
     app.listen(PORT, '0.0.0.0', () => {
-      console.log(` Server running at http://${process.env.PUBLIC_IP || '34.226.249.134'}:${PORT}`);
+      console.log(` Server running at http://${process.env.PUBLIC_IP || '44.201.103.207'}:${PORT}`);
     });
   })
   .catch((error) => {
