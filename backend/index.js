@@ -9,9 +9,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (request, response) => {
-  console.log(request);
-  return response.status(200).send('Welcome To MERN Stack Tutorial');
+app.get('/', (req, res) => {
+  console.log(req);
+  return res.status(200).send('Welcome To MERN Stack Tutorial');
 });
 
 app.use('/books', booksRoute);
@@ -19,12 +19,11 @@ app.use('/books', booksRoute);
 mongoose
   .connect(mongoDBURL)
   .then(() => {
-    console.log('App connected to database');
-    const PORT = process.env.PORT || 5555;
+    console.log('✅ Connected to MongoDB');
     app.listen(PORT, '0.0.0.0', () => {
-      console.log(`Server running on http://0.0.0.0:${PORT}`);
+      console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
     });
   })
   .catch((error) => {
-    console.log(error);
+    console.error('❌ MongoDB Connection Error:', error);
   });
