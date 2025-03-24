@@ -1,4 +1,4 @@
-# Book Store MERN stack project
+# Book Management System MERN stack project
 
 ## Lessons
 
