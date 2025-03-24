@@ -2,7 +2,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import booksRoute from './routes/booksRoute.js';
-import { PORT, mongoDBURL } from './config.js';
+import dotenv from 'dotenv';
+
+// Configure dotenv to load environment variables
+dotenv.config();
+const PORT = process.env.PORT || 5000;
+const mongoDBURL = process.env.MONGODB_URL;
 
 const app = express();
 
