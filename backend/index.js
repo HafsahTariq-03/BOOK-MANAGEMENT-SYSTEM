@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 
 // Configure dotenv to load environment variables
 dotenv.config();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6000;
 const mongoDBURL = process.env.MONGODB_URL;
 
 const app = express();
